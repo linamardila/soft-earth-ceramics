@@ -1,0 +1,4 @@
+.env
+.nano-banana-config.json
+.DS_Store
+.claude/
