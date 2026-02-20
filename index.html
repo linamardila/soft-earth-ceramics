@@ -5,6 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Soft Earth Ceramics | Handcrafted Pottery Studio</title>
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+        } else if (theme === 'light') {
+          document.documentElement.classList.remove('dark-theme');
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark-theme');
+        }
+      } catch (e) {
+        // Ignore storage errors
+      }
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -20,6 +36,11 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
+      <!-- Dark mode toggle -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle dark mode">
+        <span class="toggle-icon">🌙</span>
+        <span class="sr-only">Toggle dark mode</span>
+      </button>
     </div>
   </header>
 
@@ -58,7 +79,7 @@
     <section class="section section-centered">
       <div class="container">
         <h2 class="section-title">Our Philosophy</h2>
-        <p class="lead-text">We believe pottery is more than a craft—it's a practice of patience and presence. Working
+        <p>We believe pottery is more than a craft—it's a practice of patience and presence. Working
           with clay connects us to centuries of human creativity and grounds us in the simple satisfaction of making
           something by hand.</p>
       </div>
@@ -81,6 +102,7 @@
       <p>&copy; 2026 Soft Earth Ceramics. All rights reserved.</p>
     </div>
   </footer>
+  <script src="scripts.js" defer></script>
 </body>
 
 </html>
