@@ -15,5 +15,3 @@ This project includes a lightweight dark mode toggle for the site.
 - Notes for developers:
   - To change the dark palette, edit the `html.dark-theme` block in `styles.css` and the `@media (prefers-color-scheme: dark)` fallback.
   - If you add another toggle on a page, use `querySelectorAll` in `scripts.js` and avoid duplicate `id` values.
-
-If you'd like, I can add a short demo GIF or screenshot, or run contrast checks across the site next.
